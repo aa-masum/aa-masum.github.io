@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { background: #EAF0F4; color: #12203A; }
+a:focus-visible, button:focus-visible { outline: 3px solid #2547F5; outline-offset: 3px; }
+
+.blueprint {
+  background-image:
+    linear-gradient(#B9C6D3 1px, transparent 1px),
+    linear-gradient(90deg, #B9C6D3 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: -1px -1px;
+}
+.rotor { transform-box: fill-box; transform-origin: center; animation: spin 0.35s linear infinite; }
+.rotor:nth-of-type(even) { animation-direction: reverse; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .rotor { animation: none; } }
+
+.grid-dark {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+html { scroll-behavior: smooth; }
