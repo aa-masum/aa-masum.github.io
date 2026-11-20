@@ -68,19 +68,23 @@ export const publications = [
 
 export const education = [
   {
+    logo: '/images/cuet monogram.jpeg',
     when: 'February 2020 – September 2025',
     title: 'B.Sc. in Electrical and Electronic Engineering',
     place: 'Chittagong University of Engineering and Technology (CUET)',
-    note: 'Thesis: Design of a Neuro Fuzzy Controlled Single-Phase Bridgeless CUK AC-DC Converter with Improved Power Quality',
+    thesis: 'Design of a Neuro Fuzzy Controlled Single-Phase Bridgeless CUK AC-DC Converter with Improved Power Quality',
+    note: '',
   },
   {
-    when: '2019',
+    logo: '/images/mc-college.jpg',
+    when: 'Session: 2017-2018  HSC: 2019',
     title: 'Higher Secondary School Certificate (HSC)',
     place: 'MC College, Sylhet',
     note: 'Board Scholarship for outstanding academic performance.',
   },
   {
-    when: '2017',
+    logo: '/images/sjisc.jpg',
+    when: 'Session: 2015-2016  SSC: 2017',
     title: 'Secondary School Certificate (SSC)',
     place: 'Shahjalal Jamia Islamia School and College, Sylhet',
     note: '',
@@ -152,12 +156,12 @@ export const projects = [
   },
 
   {
-    title: 'AC Voltage Measurement System (250V RMS)',
-    description: 'This project presents a safe, compact, and accurate AC voltage measurement system capable of measuring up to 250V RMS using a PIC microcontroller, ZMPT101B voltage sensor, a custom-designed PCB, and an LCD display for real-time monitoring.',
+    title: 'Line Following Robot (LFR) ',
+    description: 'A compact  line-following robot designed to navigate predefined paths by detecting black lines on a contrasting surface. Using infrared (IR) sensors and a microcontroller-based control system, the robot continuously tracks the path and automatically adjusts its motor movements to navigate straight lines, curves, and turns without manual control.',
     tags: [ ],
-    href: 'https://github.com/aa-masum/AC-Voltage-Measurement-System-250V-RMS-',
+    href: null,
     media: [
-      { type: 'image', src: '/images/RMS voltage measure.jpg', caption: '' },
+      { type: 'video', src: '/videos/LFR.mp4', caption: '' },
     ],
   },
 
@@ -169,6 +173,18 @@ export const projects = [
     media: [
       
       { type: 'video', src: '/videos/gasleakbot.mp4', caption: '' },
+    ],
+  },
+
+
+
+    {
+    title: 'AC Voltage Measurement System (250V RMS)',
+    description: 'This project presents a safe, compact, and accurate AC voltage measurement system capable of measuring up to 250V RMS using a PIC microcontroller, ZMPT101B voltage sensor, a custom-designed PCB, and an LCD display for real-time monitoring.',
+    tags: [ ],
+    href: 'https://github.com/aa-masum/AC-Voltage-Measurement-System-250V-RMS-',
+    media: [
+      { type: 'image', src: '/images/RMS voltage measure.jpg', caption: '' },
     ],
   },
 

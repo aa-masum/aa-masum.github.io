@@ -46,10 +46,8 @@ export default function Projects({ items }) {
         const paragraphs = [].concat(p.description || p.summary || []);
         return (
           <article key={p.title} className="border-t border-rule py-12 first:border-t-0 first:pt-0">
-            <p className="font-display text-sm font-bold text-cobalt">
-              Project {String(idx + 1).padStart(2, '0')}
-            </p>
-            <h3 className="mt-1 font-display text-3xl font-bold">{p.title}</h3>
+            
+            <h3 className="font-display text-3xl font-bold">{p.title}</h3>
 
             <div className="mt-4 max-w-3xl space-y-3 text-lg leading-relaxed">
               {paragraphs.map((t) => <p key={t}>{t}</p>)}
