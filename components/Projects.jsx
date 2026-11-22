@@ -13,7 +13,8 @@ function Media({ m, title }) {
   if (m.type === 'video') {
     return (
       <video
-        className="aspect-video w-full rounded-lg bg-black object-cover"
+        className="mx-auto h-auto w-auto max-w-full rounded-lg bg-black"
+        style={{ maxHeight: m.maxHeight || '32rem' }}
         src={m.src}
         poster={m.poster || undefined}
         preload="metadata"
@@ -26,7 +27,8 @@ function Media({ m, title }) {
     <img
       src={m.src}
       alt={m.caption || title}
-      className="w-full rounded-lg border border-rule bg-white object-contain"
+      className="mx-auto h-auto w-auto max-w-full rounded-lg border border-rule bg-white"
+      style={{ maxHeight: m.maxHeight || '32rem' }}
     />
   );
 }
@@ -40,16 +42,15 @@ function getMedia(p) {
 
 export default function Projects({ items }) {
   return (
-    <div className="mx-auto max-w-5xl">
-      {items.map((p, idx) => {
+    <div className="w-full">
+      {items.map((p) => {
         const media = getMedia(p);
         const paragraphs = [].concat(p.description || p.summary || []);
         return (
           <article key={p.title} className="border-t border-rule py-12 first:border-t-0 first:pt-0">
-            
             <h3 className="font-display text-3xl font-bold">{p.title}</h3>
 
-            <div className="mt-4 max-w-3xl space-y-3 text-lg leading-relaxed">
+            <div className="mt-4 space-y-3 text-lg leading-relaxed">
               {paragraphs.map((t) => <p key={t}>{t}</p>)}
             </div>
 
@@ -62,11 +63,11 @@ export default function Projects({ items }) {
             )}
 
             {media.length > 0 && (
-              <div className={`mt-6 grid items-start gap-6 ${media.length > 1 ? 'md:grid-cols-2' : 'max-w-3xl'}`}>
+              <div className={`mt-6 grid items-start gap-6 ${media.length > 1 ? 'md:grid-cols-2' : ''}`}>
                 {media.map((m, i) => (
                   <figure key={i}>
                     <Media m={m} title={p.title} />
-                    {m.caption && <figcaption className="mt-2 text-sm">{m.caption}</figcaption>}
+                    {m.caption && <figcaption className="mt-2 text-center text-sm">{m.caption}</figcaption>}
                   </figure>
                 ))}
               </div>

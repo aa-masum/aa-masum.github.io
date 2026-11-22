@@ -161,9 +161,32 @@ export const projects = [
     tags: [ ],
     href: null,
     media: [
-      { type: 'video', src: '/videos/LFR.mp4', caption: '' },
+      { type: 'video', src: '/videos/lfr-video.mp4', caption: '', maxHeight: '24rem' },
     ],
   },
+
+
+
+{
+  title: 'TidyBot-Sim: Autonomous Cleaning Robot with SLAM and Coverage Planning',
+
+  description: [
+    'A ROS 2 and Gazebo simulation of a compact 34 cm autonomous vacuum cleaning robot designed to clean a two-room house independently. It uses SLAM for environment mapping, A* for lawn-mower coverage planning, and Pure Pursuit for motion control. The robot performs additional cleanup passes to cover missed areas, navigates under tables and desks with its 11.5 cm height, and detects previously unmapped obstacles such as boxes, shoes, and balls.',
+
+    'Tech: ROS 2 Humble, Gazebo, Python, slam_toolbox, RViz2, SDF, Xacro/URDF.'
+  ],
+
+  tags: [ ],
+  href: null,
+  href: 'https://github.com/aa-masum/tidybot-sim-ros2',
+  media: [
+    { type: 'video', src: '/videos/Tinybot-Sim.mp4', caption: '' },
+  ],
+},
+
+
+  
+
 
   {
     title: 'Autonomous gas-leak localization robot with LiDAR occupancy mapping (MATLAB simulation)',
@@ -172,7 +195,7 @@ export const projects = [
     href: 'https://github.com/aa-masum/GasLeakBot',
     media: [
       
-      { type: 'video', src: '/videos/gasleakbot.mp4', caption: '' },
+      { type: 'video', src: '/videos/Gasleakbot.mp4', caption: '' },
     ],
   },
 
