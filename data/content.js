@@ -2,7 +2,7 @@
 export const site = {
   name: 'Abdullah Al Masum',
   role: 'Robotics, IoT and cyber-physical systems',
-  headline: 'EEE Graduate | Prospective PhD Student | Robotics & AI',
+  headline: 'EEE Graduate| Robotics & Autonomous Systems | AI/ML | IoT ',
   tagline: 'EEE graduate building autonomous robots and connected sensors, and learning how to secure them.',
   email: 'aamasum027@gmail.com',
 
